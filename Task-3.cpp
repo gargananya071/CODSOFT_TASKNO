@@ -79,10 +79,14 @@ int main()
 
         // Overwrite / Occupied Check
         if (arr[r][c] == 'X' || arr[r][c] == 'O') {
-            cout << "Slot already occupied! Choose another slot.\n";
-            continue;
+            cout << "Slot already occupied! Choose another slot : ";
+            cin >> slot;
         }
 
+        index = slot - 1;
+        r = index / 3;
+        c = index % 3;
+        
         arr[r][c] = 'X';
         display();
         turns++;
@@ -111,10 +115,14 @@ int main()
 
         // Overwrite / Occupied Check
         if (arr[r][c] == 'X' || arr[r][c] == 'O') {
-            cout << "Slot already occupied! Choose another slot.\n";
-            continue;
+            cout << "Slot already occupied! Choose another slot : ";
+            cin >> slot;
         }
 
+        index = slot - 1;
+        r = index / 3;
+        c = index % 3;
+        
         arr[r][c] = 'O';
         display();
         turns++;
